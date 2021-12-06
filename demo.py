@@ -9,7 +9,7 @@ import numpy as np
 torch.backends.cudnn.benchmark = True
 torch.backends.cudnn.fastest = True
 device = torch.device("cpu")
-def main():
+def main(im1_path,im2_path):
     parser = argparse.ArgumentParser(description='PyTorch Video Frame Interpolation via Residue Refinement')
     parser.add_argument('--no-cuda', action='store_true', default=False,
                         help='disables CUDA training')
@@ -25,8 +25,8 @@ def main():
     model = model.cpu()
     model.eval()
 
-    im1_path = 'data/im1.png'
-    im2_path = 'data/im2.png'
+    #im1_path = 'im1.png'
+    #im2_path = 'im2.png'
 
     with torch.no_grad():
 
@@ -48,7 +48,8 @@ def main():
         output = model(img1, img2)
         output = output[0,:,0:H,0:W].squeeze(0).cpu()
         output = transforms.functional.to_pil_image(output)
-        output.save('data/im_interp.png')
+        output.save('static/pics/im_interp.png')
+        return "IMAGE SAVED"
 
 if __name__ == '__main__':
-    main()
+    main("im1.png","im2.png")
