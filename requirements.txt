@@ -1,5 +1,9 @@
 torch==1.10.0+cpu
 torchvision==0.11.1
+-f https://download.pytorch.org/whl/torch_stable.html 
+torch==1.10.0+cpu 
+-f https://download.pytorch.org/whl/torch_stable.html
+torchvision==0.11.1+cpu
 Pillow==6.2.1
 statsmodels==0.12.1
 numpy==1.19.5
