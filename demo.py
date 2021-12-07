@@ -1,4 +1,3 @@
-import argparse
 import torch
 import torchvision
 from torchvision import transforms
@@ -10,12 +9,12 @@ torch.backends.cudnn.benchmark = True
 torch.backends.cudnn.fastest = True
 device = torch.device("cpu")
 def main(im1_path,im2_path):
-    parser = argparse.ArgumentParser(description='PyTorch Video Frame Interpolation via Residue Refinement')
-    parser.add_argument('--no-cuda', action='store_true', default=False,
-                        help='disables CUDA training')
+    # parser = argparse.ArgumentParser(description='PyTorch Video Frame Interpolation via Residue Refinement')
+    # parser.add_argument('--no-cuda', action='store_true', default=False,
+    #                     help='disables CUDA training')
 
-    args = parser.parse_args()
-    use_cuda = not args.no_cuda and torch.cuda.is_available()
+    # args = parser.parse_args()
+    # use_cuda = not args.no_cuda and torch.cuda.is_available()
 
     transform = transforms.ToTensor()
 
