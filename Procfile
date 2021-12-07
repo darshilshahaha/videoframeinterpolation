@@ -1,1 +1,1 @@
-web: gunicorn --bind https://videoframeinterpolation.herokuapp.com app:app
+web: gunicorn --bind 127.0.0.1 app:app
