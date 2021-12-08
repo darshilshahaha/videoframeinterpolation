@@ -1,15 +1,78 @@
-<html>  
-<head>  
-    <title>upload</title>  
-</head>  
-<body>  
-    <form action = "/success" method = "post" enctype="multipart/form-data">  
-        <input type="file" name="file" />  
-        
-        <input type="file" name="file2" />  
-        <input type = "submit" value="Upload">
-    </form>
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-</body>  
-</html>  
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Video Frame Interpolation</title>
+</head>
+<style>
+    ::selection {
+      background: #48dbfb;
+    }
+    </style>
+<body>
+
+      <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-6 mt-5">
+                    <div class="display-3 font-weight-bold text-center" style="text-align: center;"> Intermediate Frame Generation </div>
+                </div>
+
+            </div>
+      </div>
+
+      <div class="container-fluid" id="howto" style="background-color: #f1c40f;">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12 text-center display-4 mt-5" style="font-weight: 400;">
+                        Get your image in 3 steps</br>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                    <form action = "/success" method = "post" enctype="multipart/form-data">  
+                        </br><input style="padding: 15px 15px 15px 0px;background-color: black; text-shadow: 2px 2px #f1c40f;" type="file" name="file" /></br></br>  
+        
+                        <input style="padding: 15px 15px 15px 0px;background-color: black; text-shadow: 2px 2px #f1c40f;" type="file" name="file2" /> </br> </br>
+                        <input style="background-color: black ;color: white;margin-bottom: 15px;" type = "submit" value="Upload"></br>
+                    </form>
+
+
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container-fluid" id="working" style="background-color: #16a085;">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12 text-center display-4 mt-5" style="font-weight: 400;">
+                      How does it work?
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-12 text-center mt-5 text-white mb-5" style="font-size: x-large;font-style: oblique;">
+                    With the help of  <span style="color: black;font-size: xx-large;">Residue Learning</span> 
+                    and <span style="color: black;font-size: xx-large;">UNet</span>
+                    , our model generates the intermediate frame for given 2 input frames. This website makes things much more easier. Hence without using any code you can do the frame rate up-conversion.
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+</body>
+
+    
+</style>
+</html>
